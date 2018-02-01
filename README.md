@@ -4,10 +4,7 @@ WinScreenFetch is a revamped and improved version of nijikokun's WinScreeny.  It
 
 ## Getting Started
 This program only works on Windows (XP to 10).  Moreover Cygwin and the most basic packages are required for this program to work.
-Once you download the shell script (or the executable), chmod +x it, and then you will be able to run it.  You can create an alias for it too.
-
-### Using the Binaries
-Just download the zipped folder, extract the executable, and run it.  And alias can be created for it too.  The exectuable is just a compiled version of the script made with SHC.
+Once you download the shell script, chmod +x it, and then you will be able to run it.  You can create an alias for it too.
 
 ## Usage
     -v                 Display script version
