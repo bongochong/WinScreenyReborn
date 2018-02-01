@@ -15,7 +15,7 @@ Just download the zipped folder, extract the executable, and run it.  And alias 
 
 ## Authors
 * **Will Liu** - [BitsByWill](https://github.com/BitsByWill)
-* **Nijiko Yonskai** - [nijikokun](https://github.com/nijikokun) - Original creator of the screenfetch for Windows (WinScreeny)
+* **Nijiko Yonskai** - [nijikokun](https://github.com/nijikokun) - Original creator of screenfetch for Windows (WinScreeny)
 
 ## What's Next?
 Let me know of any new features you want and please let me know of the issues!
