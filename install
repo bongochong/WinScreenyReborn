@@ -1,0 +1,4 @@
+#!/bin/bash
+echo -e "\nscreenfetch()\n{\n\t./screenfetch\n\treturn\n}" >> ~/.bashrc
+echo "Successfully installed!"
+echo "This program will only work if the screenfetch script is in the home directory"
