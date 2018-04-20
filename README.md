@@ -1,6 +1,6 @@
 # WinScreenFetch
 WinScreenFetch is a revamped and improved version of nijikokun's WinScreeny.  It has more features and there is now support for Windows 8, 8.1, and 10.
-![WinScreenFetch](https://s9.postimg.org/r2x20wtfz/Win_Screen_Fetch.png)
+![WinScreenFetch](https://s31.postimg.cc/mu8citqm3/Win_Screen_Fetch.png)
 
 ## Getting Started
 This program only works on Windows (XP to 10).  Moreover Cygwin and the most basic packages are required for this program to work.
