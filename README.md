@@ -18,6 +18,6 @@ Once you download the shell script, chmod +x it, and then you will be able to ru
 Let me know of any new features you want and please let me know of the issues!
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under GNU GPLv3 - see the [LICENSE](LICENSE) file for details
 
 
