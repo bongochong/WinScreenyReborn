@@ -1,4 +1,5 @@
 #!/bin/bash
-echo -e "\nscreenfetch()\n{\n\t./WinScreenFetch\n\treturn\n}" >> ~/.bashrc
+ln -s screenfetch.sh screenfetch 
+cp screenfetch /bin/
+rm screenfetch
 echo "Successfully installed!"
-echo "This program will only work if the screenfetch script is in the home directory"
