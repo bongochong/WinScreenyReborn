@@ -1,5 +1,5 @@
 #!/bin/bash
-ln -s screenfetch.sh screenfetch 
-cp screenfetch /bin/
-rm screenfetch
+ln -s screeny.sh screeny 
+cp screeny /bin/
+rm screeny
 echo "Successfully installed!"
