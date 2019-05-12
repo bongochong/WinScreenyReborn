@@ -1,5 +1,5 @@
 # WinScreenyFixed
-WinScreenyFixed is a bug-fix version of BitsyByWill's revamped and improved version of nijikokun's WinScreeny.  It all works, has more features, and there is now support for Windows 8, 8.1, and 10.
+WinScreenyFixed is a bug-fix version of BitsyByWill's revamped version of nijikokun's WinScreeny.  It all works now, it has more features, and there it supports Windows 8, 8.1, and 10.
 ![WinScreenyFixed](winscreenyfixed.png)
 
 ## Getting Started
