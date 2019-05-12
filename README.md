@@ -3,14 +3,14 @@ WinScreenyFixed is an improved and modified bug-fix version of BitsyByWill's rev
 ![WinScreenyFixed](winscreeny06.png)
 
 ## Getting Started
-This program only works on Windows (XP to 10).  Moreover Cygwin and the most basic packages are required for this program to work. Once you download the shell script, chmod +x it, and then you will be able to run it. You can use the `install.sh` script for it (chmod +x it).  Also, please make sure your terminal screen is large enough for all the text to fit (you will know when to resize it based on the output).
+This program only works on Windows (XP to 10). Moreover, Cygwin is required for this program to work. You can run it with `sh screeny.sh`, add an alias for it in your bash profile / bashrc, or use the `install.sh` script (chmod +x it if necessary) to have it copied to your `/bin` directory. Also, please make sure your terminal screen is large enough for all the text to fit (you will know when to resize it based on the output).
 
 ## Usage
 	-v		Display script version
 	-h		Display this file
 
 ## Authors
-* **Chongo Bong** - [bongochong](https://github.com/bongochong) - Fixed some bugs, added a new feature, removed some garbage, and will actually keep WinScreeny updated.
+* **Chongo Bong** - [bongochong](https://github.com/bongochong) - Fixed several bugs, added a few new features, removed some garbage, and will actually keep WinScreeny updated.
 
 * **Will Liu** - [BitsByWill](https://github.com/BitsByWill) - Made WinScreeny nicer, and also did some not so nice things.
 
