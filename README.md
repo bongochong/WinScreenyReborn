@@ -11,7 +11,7 @@ Once you download the shell script, chmod +x it, and then you will be able to ru
     -h                 Display this file
 
 ## Authors
-* **Chongo Bong** - (bongochong)[https://github.com/bongochong]
+* **Chongo Bong** - [bongochong](https://github.com/bongochong)
 * **Will Liu** - [BitsByWill](https://github.com/BitsByWill)
 * **Nijiko Yonskai** - [nijikokun](https://github.com/nijikokun) - Original creator of screenfetch for Windows (WinScreeny)
 
