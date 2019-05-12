@@ -36,7 +36,7 @@ fi
 
 help(){
 	echo -e "${und}Usage${rst}:"
-	echo -e "  WinScreeny [Optional Flags]"
+	echo -e "screeny.sh (or screeny if installed / aliased) [Optional Flags]"
 	echo ""
 	echo "WinScreeny - A CLI Bash Script to show System Information for Windows!"
 	echo ""
