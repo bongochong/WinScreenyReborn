@@ -1,6 +1,6 @@
 # WinScreenyFixed
 WinScreenyFixed is a bug-fix version of BitsyByWill's revamped version of nijikokun's WinScreeny.  It all works now, it has more features, and it supports Windows 8 and 10.
-![WinScreenyFixed](winscreenyBG.png)
+![WinScreenyFixed](winscreenybg.png)
 
 ## Getting Started
 This program only works on Windows (XP to 10).  Moreover Cygwin and the most basic packages are required for this program to work.
