@@ -141,7 +141,7 @@ detectShell () {
 }
 
 detectMotherboard () {
-    board=`wmic baseboard get product | tail -2 | tr -d '\r '`
+    board=`wmic baseboard get product,manufacturer | sed 's/Manufacturer  //' | sed 's/Product  //'| tr -d '\r\n' | sed 's/ \{2,\}/ /g'`
 }
 
 detectDE () {
