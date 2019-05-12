@@ -12,8 +12,12 @@ Once you download the shell script, chmod +x it, and then you will be able to ru
 
 ## Authors
 * **Chongo Bong** - [bongochong](https://github.com/bongochong) - Fixed some bugs and removed some garbage from WinScreeny, and will actually keep it updated.
+
 * **Will Liu** - [BitsByWill](https://github.com/BitsByWill) - Made WinScreeny nicer, and also did some not so nice things.
+
 * **Nijiko Yonskai** - [nijikokun](https://github.com/nijikokun) - Original creator of WinScreeny.
+
+---
 
 ## What's Next?
 Making sure that this neat little script stays bug-free and up-to-date.
