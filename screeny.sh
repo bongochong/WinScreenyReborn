@@ -1,6 +1,12 @@
 #!/bin/bash
+#
+# Windows Screenfetch Fixed (Without the Screenshot functionality)
+# Originally Hacked together by Nijikokun <nijikokun@gmail.com> 
+# Improved and Modified by BitsByWill
+# Fixed, Further Improved and Modified by chongobong
+# License: GPLv3
 
-version='0.2'
+version='0.5'
 
 # Displayment
 display=( Host KerVer Cpu OS Arch Shell GPU1 GPU2 Motherboard HDD Memory Uptime Resolution DE WM WMTheme Font )
@@ -162,7 +168,6 @@ detectWM () {
 detectWMTheme () {
 	themeFile="$(reg query 'HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes' /v 'CurrentTheme' | grep -o '[A-Z]:\\.*')"
 	theme=$(echo $themeFile | awk -F"\\" '{print $NF}' | sed "s/.theme//")
-	[[ "$debug" -eq "1" ]] && Debug "Finding Window Theme.... Found as: '$theme'"
 }
 
 detectFont () {
