@@ -11,9 +11,9 @@ Once you download the shell script, chmod +x it, and then you will be able to ru
     -h                 Display this file
 
 ## Authors
-* **Chongo Bong** - [bongochong](https://github.com/bongochong) - Fixed a bug, and will maintain the script.
-* **Will Liu** - [BitsByWill](https://github.com/BitsByWill) - Made it a lot nicer,
-* **Nijiko Yonskai** - [nijikokun](https://github.com/nijikokun) - Original creator of screenfetch for Windows (WinScreeny).
+* **Chongo Bong** - [bongochong](https://github.com/bongochong) - Fixed a bug in WinScreeny, and will keep it updated.
+* **Will Liu** - [BitsByWill](https://github.com/BitsByWill) - Made WinScreeny a lot nicer.
+* **Nijiko Yonskai** - [nijikokun](https://github.com/nijikokun) - Original creator of WinScreeny.
 
 ## What's Next?
 Making sure that this neat little script stays bug-free and up-to-date.
