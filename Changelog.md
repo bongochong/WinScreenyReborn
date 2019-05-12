@@ -1,5 +1,9 @@
 **Changelog**:
 
+05/12/2019 - Corrected installer script.
+
+---
+
 05/12/2019 - Now properly detects OS version *and* edition.
 
 ---
