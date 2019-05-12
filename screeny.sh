@@ -1,10 +1,9 @@
 #!/bin/bash
 
-
-version='0.1'
+version='0.2'
 
 # Displayment
-display=( Host KerVer Cpu OS Arch Shell GPU Motherboard HDD Memory Uptime Resolution DE WM WMTheme Font )
+display=( Host KerVer Cpu OS Arch Shell GPU1 GPU2 Motherboard HDD Memory Uptime Resolution DE WM WMTheme Font )
 
 # Color Loop
 bld=$'\e[1m'
@@ -31,9 +30,9 @@ fi
 
 help(){
 	echo -e "${und}Usage${rst}:"
-	echo -e "  WinScreenFetch [Optional Flags]"
+	echo -e "  WinScreeny [Optional Flags]"
 	echo ""
-	echo "WinScreenFetch - A CLI Bash Script to show System Information for Windows!"
+	echo "WinScreeny - A CLI Bash Script to show System Information for Windows!"
 	echo ""
 	echo -e "${und}Options${rst}:"
 	echo -e "    ${bld}-v${rst}                 Display script version"
@@ -47,11 +46,11 @@ while getopts "vh" flags; do
 			help
 			exit;;
 		v)
-			echo -e "${und}WinScreenFetch${rst} - Version ${version}"
-			echo -e "Copyright (C) Will Liu (github.com/BitsByWill)"
-			echo ""
-			echo -e "This is free software, under the MIT License: https://opensource.org/licenses/MIT"
-			echo -e "Source can be downloaded from: https://github.com/BitsByWill/WinScreenFetch"
+			echo -e "${und}WinScreenyFixed${rst} - Version ${version}"
+			echo -e "Copyright (C) Chongo Bong (AMK) (github.com/bongochong)"
+			echo -e "Orginally cobbled together by Nijiko Yonskai (github.com/nijikokun)"
+			echo -e "This is free software, under the GNU GPLv3 License: https://www.gnu.org/licenses/gpl-3.0.en.html"
+			echo -e "Source can be downloaded from: https://github.com/bongochong/WinScreenyFixed"
 			exit;;
 	esac
 done
@@ -70,7 +69,7 @@ detectHost () {
 }
 
 detectCpu () {
-	cpu=$(awk -F':' '/model name/{ print $2 }' /proc/cpuinfo | head -n 1 | tr -s " " | sed 's/^ //')
+	cpu=$(awk -F':' '/model name/{ print $2 }' /proc/cpuinfo | head -n 1 | tr -s " " | sed 's/^ //' | sed 's/(R)//' | sed 's/(TM)//')
 }
 
 detectOS () {
@@ -144,7 +143,7 @@ detectDE () {
 	elif [ "$winver" == "1" ]; then
 		de='Aero'
 	else
-		de='Not Applicable'
+		de='N/A'
 	fi
 }
 
@@ -173,8 +172,15 @@ detectFont () {
 	fi
 }
 
-detectGPU(){
-	gpuName=$(wmic path win32_VideoController get name | awk 'FNR==2{ print $0 }')
+detectGPU1(){
+	gpuNameA=$(wmic path win32_VideoController get name | awk 'FNR==2{ print $0 }' | sed 's/(R)//' | sed 's/(TM)//')
+}
+
+detectGPU2(){
+	gpuNameB=$(wmic path win32_VideoController get name | awk 'FNR==3{ print $0 }' | sed 's/(R)//' | sed 's/(TM)//')
+	if [ -z "$gpuNameB" ]; then
+		gpuNameB="N/A"
+	fi
 }
 
 # Loops :>
@@ -185,41 +191,43 @@ done
 # Output
 if [ $y -eq 1 ] ; then
 cat << EOF
-$f2                            ,L2E@B@BB2                   
-$f2                   G8BBBB@@@B@BM@@@BB@B7       ${f1}${user}${f7}@${f3}${host} 
-$f1    r;kO@B@O@@B@@M $f2@MM@M@M@@@@BO@BBB@M@i                   
-$f1   M@BMB@@M@M@MMM@ $f2@B@@@MM@@M@M@B@@@M@Or       ${f1}OS: ${f7}${os} ${arch}              
-$f1   Z@@@M@M@B@MB@B@ $f2;@@B@@M@@@O@B@B@O@M@i       ${f1}Kernel: ${f7}Version $kerVer            
-$f1   O@@B@B@MBB@BBBB $f2@@MB@@B@@@@MBMB@@@@Mr       ${f1}CPU: ${f7}${cpu}            
-$f1   8@M@@@@B@@B@@BM $f2@@MMB@@BO@BBM@BBBM@@7       ${f1}HDD: ${f7}$free / $size           
-$f1   BB@@@BMM@MBB@@M $f2@BB@@BMBMB@@@@B@@@BBB7      ${f1}Memory: ${f7}${mem}             
-$f1   M@@M@@M@@B@@O@@ $f2@M@@@@@@@@@B@@@MBBBM@7      ${f1}Uptime: ${f7}$uptime            
-                                               ${f1}Resolution: ${f7}$width x $height        
-$f4   8@O@@BB@@@B@@@@ $f3@M@B@@@B@@@@@B@M@@@@Mi      ${f1}Motherboard: ${f7}$board                  
-$f4   EBB@@@@M@@@MBM@ $f3@@@@@M@BBB@B@@M@@@@Mvj      ${f1}GPU: ${f7}$gpuName  
-$f4   E@B@@B@BM@@B@@B $f3@M@B@@@M@M@M@@B@@@@B@;      ${f1}Shell: ${f7}$myshell                         
-$f4   ZB@B@@@MMBMM@M@ $f3@B@@BM@MBBBB@@@BMO@Mr       ${f1}DE: ${f7}$de                                 
-$f4   E@B@O@M@BB@@O@B $f3@MM@@BMBMB@@M@BBM@BBr       ${f1}WM: ${f7}$wm                          
-$f4   Z@@BBB@@@MBMM@B $f3@M@B@O@MB@@B@B@@@B@@7       ${f1}WM Theme: ${f7}$theme   
-$f4    vvqM@O@B@M@@B@ $f3@@@@B@@BO@MM@@MB@@B@i       ${f1}Font: ${f7}$font                  
+$f1
+$f2                            ,L2E@B@BB2         ${f1}${user}${f7}@${f3}${host}
+$f2                   G8BBBB@@@B@BM@@@BB@B7          
+$f1    r;kO@B@O@@B@@M $f2@MM@M@M@@@@BO@BBB@M@i       ${f1}OS: ${f7}${os} ${arch}
+$f1   M@BMB@@M@M@MMM@ $f2@B@@@MM@@M@M@B@@@M@Or       ${f1}Kernel: ${f7}Version $kerVer
+$f1   Z@@@M@M@B@MB@B@ $f2;@@B@@M@@@O@B@B@O@M@i       ${f1}CPU: ${f7}${cpu}
+$f1   O@@B@B@MBB@BBBB $f2@@MB@@B@@@@MBMB@@@@Mr       ${f1}HDD: ${f7}$free / $size
+$f1   8@M@@@@B@@B@@BM $f2@@MMB@@BO@BBM@BBBM@@7       ${f1}Memory: ${f7}${mem}
+$f1   BB@@@BMM@MBB@@M $f2@BB@@BMBMB@@@@B@@@BBB7      ${f1}Uptime: ${f7}$uptime
+$f1   M@@M@@M@@B@@O@@ $f2@M@@@@@@@@@B@@@MBBBM@7      ${f1}Resolution: ${f7}$width x $height
+                                               ${f1}Motherboard: ${f7}$board
+$f4   8@O@@BB@@@B@@@@ $f3@M@B@@@B@@@@@B@M@@@@Mi      ${f1}GPU 1: ${f7}$gpuNameA
+$f4   EBB@@@@M@@@MBM@ $f3@@@@@M@BBB@B@@M@@@@Mvj      ${f1}GPU 2: ${f7}$gpuNameB
+$f4   E@B@@B@BM@@B@@B $f3@M@B@@@M@M@M@@B@@@@B@;      ${f1}Shell: ${f7}$myshell
+$f4   ZB@B@@@MMBMM@M@ $f3@B@@BM@MBBBB@@@BMO@Mr       ${f1}DE: ${f7}$de
+$f4   E@B@O@M@BB@@O@B $f3@MM@@BMBMB@@M@BBM@BBr       ${f1}WM: ${f7}$wm
+$f4   Z@@BBB@@@MBMM@B $f3@M@B@O@MB@@B@B@@@B@@7       ${f1}WM Theme: ${f7}$theme
+$f4    vvqM@O@B@M@@B@ $f3@@@@B@@BO@MM@@MB@@B@i       ${f1}Font: ${f7}$font
 $f4           ,. @@@B $f3@@BBB@@@@@@B@@B@@L                   
 $f3                         i750@MBMBu
 	$rst
 EOF
 else
 cat <<EOF
-$f1         ,.=:^!^!t3Z3z.,                
-$f1        :tt:::tt333EE3                  ${f1}${user}${f7}@${f3}${host}
-$f1        Et:::ztt33EEE  $f2@Ee.,      ..,   
-$f1       ;tt:::tt333EE7 $f2;EEEEEEttttt33#   ${f1}OS: ${f7}${os} ${arch}
-$f1      :Et:::zt333EEQ.$f2 SEEEEEttttt33QL   ${f1}Kernel: ${f7}Version $kerVer
-$f1      it::::tt333EEF $f2@EEEEEEttttt33F    ${f1}CPU: ${f7}${cpu}
-$f1     ;3=*^\`\`\`'*4EEV $f2:EEEEEEttttt33@.    ${f1}HDD: ${f7}$free / $size
-$f4     ,.=::::it=., $f1\` $f2@EEEEEEtttz33QF     ${f1}Memory: ${f7}${mem}
-$f4    ;::::::::zt33)   $f2'4EEEtttji3P*      ${f1}Uptime: ${f7}$uptime
-$f4   :t::::::::tt33.$f3:Z3z..  $f2\`\` $f3,..g.      ${f1}Resolution: ${f7}$width x $height
-$f4   i::::::::zt33F$f3 AEEEtttt::::ztF       ${f1}Motherboard: ${f7}$board
-$f4  ;:::::::::t33V $f3;EEEttttt::::t3        ${f1}GPU: ${f7}$gpuName
+$f1
+$f1         ,.=:^!^!t3Z3z.,                ${f1}${user}${f7}@${f3}${host}
+$f1        :tt:::tt333EE3                  
+$f1        Et:::ztt33EEE  $f2@Ee.,      ..,   ${f1}OS: ${f7}${os} ${arch}
+$f1       ;tt:::tt333EE7 $f2;EEEEEEttttt33#   ${f1}Kernel: ${f7}Version $kerVer
+$f1      :Et:::zt333EEQ.$f2 SEEEEEttttt33QL   ${f1}CPU: ${f7}${cpu}
+$f1      it::::tt333EEF $f2@EEEEEEttttt33F    ${f1}HDD: ${f7}$free / $size
+$f1     ;3=*^\`\`\`'*4EEV $f2:EEEEEEttttt33@.    ${f1}Memory: ${f7}${mem}
+$f4     ,.=::::it=., $f1\` $f2@EEEEEEtttz33QF     ${f1}Uptime: ${f7}$uptime
+$f4    ;::::::::zt33)   $f2'4EEEtttji3P*      ${f1}Resolution: ${f7}$width x $height
+$f4   :t::::::::tt33.$f3:Z3z..  $f2\`\` $f3,..g.      ${f1}Motherboard: ${f7}$board
+$f4   i::::::::zt33F$f3 AEEEtttt::::ztF       ${f1}GPU 1: ${f7}$gpuNameA
+$f4  ;:::::::::t33V $f3;EEEttttt::::t3        ${f1}GPU 2: ${f7}$gpuNameB
 $f4  E::::::::zt33L $f3@EEEtttt::::z3F        ${f1}Shell: ${f7}$myshell
 $f4 {3=*^\`\`\`'*4E3) $f3;EEEtttt:::::tZ\`        ${f1}DE: ${f7}$de
 $f4             \` $f3:EEEEtttt::::z7          ${f1}WM: ${f7}$wm
