@@ -1,5 +1,9 @@
 **Changelog**:
 
+05/12/2019 - Pulls in more data about motherboard and displays it properly now.
+
+---
+
 05/12/2019 - Corrected installer script.
 
 ---
