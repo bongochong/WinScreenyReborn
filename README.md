@@ -1,6 +1,6 @@
-# WinScreenyFixed
-WinScreenyFixed is an improved and modified bug-fix version of BitsyByWill's revamped version of nijikokun's WinScreeny.  It all works now, it has more features, and it supports Windows 8 and 10.
-![WinScreenyFixed](winscreeny06.png)
+# WinScreenyReborn
+WinScreenyReborn is an improved and modified bug-fix version of BitsyByWill's revamped version of nijikokun's WinScreeny.  It all works now, it has more features, and it supports Windows 8 and 10.
+![WinScreenyReborn](winscreeny06.png)
 
 ## Getting Started
 This program only works on Windows (XP to 10). Moreover, Cygwin is required for this program to work. You can run it with `sh screeny.sh`, add an alias for it in your bash profile / bashrc, or use the `install.sh` script (chmod +x it if necessary) to have it copied to your `/bin` directory. Also, please make sure your terminal screen is large enough for all the text to fit (you will know when to resize it based on the output).
