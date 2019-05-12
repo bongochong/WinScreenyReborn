@@ -11,7 +11,7 @@ Once you download the shell script, chmod +x it, and then you will be able to ru
     -h                 Display this file
 
 ## Authors
-* **Chongo Bong** - [bongochong](https://github.com/bongochong) - Fixed some bugs and removed some garbage from WinScreeny, and will actually keep it updated.
+* **Chongo Bong** - [bongochong](https://github.com/bongochong) - Fixed some bugs, added a new feature, removed some garbage, and will actually keep WinScreeny updated.
 
 * **Will Liu** - [BitsByWill](https://github.com/BitsByWill) - Made WinScreeny nicer, and also did some not so nice things.
 
