@@ -1,12 +1,12 @@
 #!/bin/bash
 #
-# Windows Screenfetch Fixed (Without the Screenshot functionality)
+# Windows Screenfetch Fixed and Improved (Without the Screenshot functionality)
 # Originally Hacked together by Nijikokun <nijikokun@gmail.com> 
 # Improved and Modified by BitsByWill
 # Fixed, Further Improved and Modified by chongobong
 # License: GPLv3
 
-version='0.6'
+version='0.7'
 
 # Displayment
 display=( Host KerVer Cpu OS Arch Shell GPU1 GPU2 Motherboard HDD Memory Uptime Resolution DE WM WMTheme Font )
@@ -38,7 +38,7 @@ help(){
 	echo -e "${und}Usage${rst}:"
 	echo -e "screeny.sh (or screeny if installed / aliased) [Optional Flags]"
 	echo ""
-	echo "WinScreeny - A CLI Bash Script to show System Information for Windows!"
+	echo "WinScreenyReborn - A CLI Bash Script to show System Information for Windows!"
 	echo ""
 	echo -e "${und}Options${rst}:"
 	echo -e "    ${bld}-v${rst}                 Display script version"
