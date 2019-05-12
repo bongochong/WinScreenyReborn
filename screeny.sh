@@ -161,7 +161,9 @@ detectWM () {
 }
 
 detectWMTheme () {
-	theme=$(reg query 'HKCU\Software\Microsoft\Windows\CurrentVersion\Themes' /v 'CurrentTheme' | grep -o '[A-Z]:\\.*')
+	themeFile="$(reg query 'HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes' /v 'CurrentTheme' | grep -o '[A-Z]:\\.*')"
+	theme=$(echo $themeFile | awk -F"\\" '{print $NF}' | sed "s/.theme//")
+	[[ "$debug" -eq "1" ]] && Debug "Finding Window Theme.... Found as: '$theme'"
 }
 
 detectFont () {
