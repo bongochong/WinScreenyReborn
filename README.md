@@ -16,7 +16,7 @@ Once you download the shell script, chmod +x it, and then you will be able to ru
 * **Nijiko Yonskai** - [nijikokun](https://github.com/nijikokun) - Original creator of screenfetch for Windows (WinScreeny)
 
 ## What's Next?
-Let me know of any new features you want and please let me know of the issues!
+Making sure that this neat little script stays bug-free and up-to-date.
 
 ## License
 This project is licensed under GNU GPLv3 - see the [LICENSE](LICENSE) file for details
