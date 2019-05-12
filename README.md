@@ -3,7 +3,7 @@ WinScreenyReborn is an improved and modified bug-fix version of BitsyByWill's re
 ![WinScreenyReborn](winscreeny06.png)
 
 ## Getting Started
-This program only works on Windows (XP to 10) with Cygwin installed. You can run it with `sh screeny.sh`, add an alias for it in your bash profile / bashrc, or use the `install.sh` script (chmod +x it if necessary) to have it placed in your `/bin` directory. You may need to increase the size of your terminal depending on your font-size and such (you will know when to resize it based on the output).
+This program only works on Windows (XP to 10) with Cygwin installed. You can run it with via Cygwin's terminal with `sh screeny.sh`, add an alias for it in your bash profile / bashrc, or use the `install.sh` script (chmod +x it if necessary) to have it placed in your `/bin` directory. You may need to increase the size of your terminal depending on your font-size and such when using this script (you will know if you do).
 
 ## Usage
 	-v		Display script version
