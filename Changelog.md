@@ -1,5 +1,9 @@
 **Changelog**:
 
+05/12/2019 - Now properly detects OS version *and* edition.
+
+---
+
 05/12/2019 - Added back original comments / disclaimer by Nijiko Yonskai. Ammended to them. Bumped version number. Removed extraneous line. Now doing some inspection to see if Nijiko's debugging makes sense to re-integrate.
 
 ---

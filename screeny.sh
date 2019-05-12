@@ -6,7 +6,7 @@
 # Fixed, Further Improved and Modified by chongobong
 # License: GPLv3
 
-version='0.5'
+version='0.6'
 
 # Displayment
 display=( Host KerVer Cpu OS Arch Shell GPU1 GPU2 Motherboard HDD Memory Uptime Resolution DE WM WMTheme Font )
@@ -53,9 +53,13 @@ while getopts "vh" flags; do
 			exit;;
 		v)
 			echo -e "${und}WinScreenyFixed${rst} - Version ${version}"
+			echo ""
 			echo -e "Copyright (C) Chongo Bong (AMK) (github.com/bongochong)"
+			echo ""
 			echo -e "Orginally cobbled together by Nijiko Yonskai (github.com/nijikokun)"
-			echo -e "This is free software, under the GNU GPLv3 License: https://www.gnu.org/licenses/gpl-3.0.en.html"
+			echo ""
+			echo -e "This is free software, under the GNU GPLv3 License: https://www.gnu.org/licenses/"
+			echo ""
 			echo -e "Source can be downloaded from: https://github.com/bongochong/WinScreenyFixed"
 			exit;;
 	esac
@@ -79,8 +83,8 @@ detectCpu () {
 }
 
 detectOS () {
-	os=`wmic os get name | head -2 | tail -1`
-	os=`expr match "$os" '\(Microsoft Windows [A-Za-z0-9]\+\)'`
+	os=`wmic os get name | head -2 | tail -1 | sed 's/Microsoft //'`
+	os=`expr match "$os" '\(Windows [A-Za-z0-9] [A-Za-z0-9]\+\)'`
 }
 
 detectArch () {
