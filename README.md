@@ -6,8 +6,8 @@ WinScreenyFixed is a bug-fix version of BitsyByWill's revamped version of nijiko
 This program only works on Windows (XP to 10).  Moreover Cygwin and the most basic packages are required for this program to work. Once you download the shell script, chmod +x it, and then you will be able to run it.  You can use the "install" script for it (chmod +x it).  Also, please make sure your terminal screen is large enough for all the text to fit (you will know when to resize it based on the output).
 
 ## Usage
-	-v			Display script version
-	-h			Display this file
+	-v		Display script version
+	-h		Display this file
 
 ## Authors
 * **Chongo Bong** - [bongochong](https://github.com/bongochong) - Fixed some bugs, added a new feature, removed some garbage, and will actually keep WinScreeny updated.
