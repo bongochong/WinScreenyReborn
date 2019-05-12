@@ -166,9 +166,9 @@ detectWMTheme () {
 }
 
 detectFont () {
-	font=$(cat $HOME/.minttyrc 2> /dev/null | grep '^Font=.*' | grep -o '[0-9A-Za-z ]*$')
-	if [ -z $font ]; then
-		font="Lucida Console"
+	fontect=$(cat $HOME/.minttyrc 2> /dev/null | grep '^Font=.*' | grep -o '[0-9A-Za-z ]*$')
+	if [ -z "$fontect" ]; then
+		fontect="Lucida Console"
 	fi
 }
 
@@ -208,7 +208,7 @@ $f4   E@B@@B@BM@@B@@B $f3@M@B@@@M@M@M@@B@@@@B@;      ${f1}Shell: ${f7}$myshell
 $f4   ZB@B@@@MMBMM@M@ $f3@B@@BM@MBBBB@@@BMO@Mr       ${f1}DE: ${f7}$de
 $f4   E@B@O@M@BB@@O@B $f3@MM@@BMBMB@@M@BBM@BBr       ${f1}WM: ${f7}$wm
 $f4   Z@@BBB@@@MBMM@B $f3@M@B@O@MB@@B@B@@@B@@7       ${f1}WM Theme: ${f7}$theme
-$f4    vvqM@O@B@M@@B@ $f3@@@@B@@BO@MM@@MB@@B@i       ${f1}Font: ${f7}$font
+$f4    vvqM@O@B@M@@B@ $f3@@@@B@@BO@MM@@MB@@B@i       ${f1}Font: ${f7}$fontect
 $f4           ,. @@@B $f3@@BBB@@@@@@B@@B@@L                   
 $f3                         i750@MBMBu
 	$rst
@@ -232,7 +232,7 @@ $f4  E::::::::zt33L $f3@EEEtttt::::z3F        ${f1}Shell: ${f7}$myshell
 $f4 {3=*^\`\`\`'*4E3) $f3;EEEtttt:::::tZ\`        ${f1}DE: ${f7}$de
 $f4             \` $f3:EEEEtttt::::z7          ${f1}WM: ${f7}$wm
 $f3                 $f3'VEzjt:;;z>*\`          ${f1}WM Theme: ${f7}$theme
-					${f1}Font: ${f7}$font
+					${f1}Font: ${f7}$fontect
 										 $rst	 
 EOF
 fi
