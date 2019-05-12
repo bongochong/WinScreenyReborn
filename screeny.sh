@@ -52,7 +52,7 @@ while getopts "vh" flags; do
 			help
 			exit;;
 		v)
-			echo -e "${und}WinScreenyFixed${rst} - Version ${version}"
+			echo -e "${und}WinScreenyReborn${rst} - Version ${version}"
 			echo ""
 			echo -e "Copyright (C) Chongo Bong (AMK) (github.com/bongochong)"
 			echo ""
@@ -60,7 +60,7 @@ while getopts "vh" flags; do
 			echo ""
 			echo -e "This is free software, under the GNU GPLv3 License: https://www.gnu.org/licenses/"
 			echo ""
-			echo -e "Source can be downloaded from: https://github.com/bongochong/WinScreenyFixed"
+			echo -e "Source can be downloaded from: https://github.com/bongochong/WinScreenyReborn"
 			exit;;
 	esac
 done
