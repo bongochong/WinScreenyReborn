@@ -1,6 +1,6 @@
 **Changelog**:
 
-05/12/2019 - De-forked the repository. I work rapidly. No one can stop this train. Bumped version to 0.7.
+05/12/2019 - No one can stop this train. Bumped version to 0.7.
 
 ---
 
