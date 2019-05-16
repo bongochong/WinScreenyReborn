@@ -1,5 +1,9 @@
 **Changelog**:
 
+05/16/2019 - Removed more garbage terms from manufacturer output. Increased DE detection up to one decimal point. Some nice little string replacements added as well.
+
+---
+
 05/12/2019 - No one can stop this train. Bumped version to 0.7.
 
 ---
