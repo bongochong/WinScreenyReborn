@@ -148,12 +148,16 @@ detectDE () {
 	winver=`wmic os get version | grep -Eo "^[0-9]+\.[0-9]+"`
 	if [ "$winver" == "10.0" ]; then
 		de='Metro'
+	elif [ "$winver" == "6.3" ]; then
+		de='Metro'
 	elif [ "$winver" == "6.2" ]; then
 		de='Metro'
 	elif [ "$winver" == "6.1" ]; then
 		de='Aero'
 	elif [ "$winver" == "6.0" ]; then
 		de='Aero'
+	elif [ "$winver" == "5.2" ]; then
+		de='Luna'
 	elif [ "$winver" == "5.1" ]; then
 		de='Luna'
 	else
