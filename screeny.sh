@@ -83,7 +83,7 @@ detectCpu () {
 }
 
 detectOS () {
-	os=`wmic os get name | head -2 | tail -1 | sed 's/Microsoft //' | sed -i 's/Starter/Poverty/g' | sed -i 's/Basic/Toaster/g'`
+	os=`wmic os get name | head -2 | tail -1 | sed 's/Microsoft //' | sed 's/Starter/Poverty/g' | sed 's/Basic/Toaster/g'`
 	os=`expr match "$os" '\(Windows [A-Za-z0-9] [A-Za-z0-9]\+\)'`
 }
 
