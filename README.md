@@ -10,9 +10,9 @@ This program only works on Windows (XP to 10) with Cygwin installed. You can run
 	-h		Display this file
 
 ## Authors
-* **Chongo Bong** - [bongochong](https://github.com/bongochong) - Forked WinScreeny when it became abandoned once again. It was in a sorry state. Fixed several bugs, made things work again, added a few new features, removed some garbage, and will actually keep WinScreeny updated.
+* **Chongo Bong** - [bongochong](https://github.com/bongochong) - Forked WinScreeny when it became abandoned once again. It was in a sorry state. Fixed all the bugs he could find, made the things work again, added a few new features, removed some garbage, and will actually keep WinScreeny updated.
 
-* **Will Liu** - [BitsByWill](https://github.com/BitsByWill) - Forked WinScreeny when it became abandoned. Made some things nicer, and made some things work again. Also did some not so nice things, and made some things not work.
+* **Will Liu** - [BitsByWill](https://github.com/BitsByWill) - Forked WinScreeny when it became abandoned. Made some things nicer, and made some things work again. Also did some not so nice things, and made some things not work (or they just broke over time and he didn't fix them, I can't tell, and I don't want to be unncessarily harsh).
 
 * **Nijiko Yonskai** - [nijikokun](https://github.com/nijikokun) - Original creator of WinScreeny. A great man.
 
