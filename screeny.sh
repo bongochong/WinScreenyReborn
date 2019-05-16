@@ -79,7 +79,7 @@ detectHost () {
 }
 
 detectCpu () {
-	cpu=$(awk -F':' '/model name/{ print $2 }' /proc/cpuinfo | head -n 1 | tr -s " " | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//' | sed 's/ CPU//' | sed 's/Co., //' | sed 's/Ltd., //' | sed 's/Co. //' | sed 's/Ltd. //' | sed "s/^[ \t]*//" | sed -e "s/[[:space:]]\+/ /g" | sed '/^$/d')
+	cpu=$(awk -F':' '/model name/{ print $2 }' /proc/cpuinfo | head -n 1 | tr -s " " | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//' | sed 's/ CPU//' | sed 's/Co., //' | sed 's/Ltd., //' | sed 's/Co. //' | sed 's/Ltd. //' | sed "s/^[ \t]*//" | sed -e "s/[[:space:]]\+/ /g" | sed '/^$/d' | cut -c -63)
 }
 
 detectOS () {
@@ -141,7 +141,7 @@ detectShell () {
 }
 
 detectMotherboard () {
-    board=`wmic baseboard get product,manufacturer | sed 's/Manufacturer  //' | sed 's/Product  //'| tr -d '\r\n' | sed 's/ \{2,\}/ /g' | sed 's/Co., //' | sed 's/Ltd., //' | sed 's/Co. //' | sed 's/Ltd. //' | sed "s/^[ \t]*//" | sed -e "s/[[:space:]]\+/ /g" | sed '/^$/d'`
+    board=`wmic baseboard get product,manufacturer | sed 's/Manufacturer  //' | sed 's/Product  //'| tr -d '\r\n' | sed 's/ \{2,\}/ /g' | sed 's/Co., //' | sed 's/Ltd., //' | sed 's/Co. //' | sed 's/Ltd. //' | sed "s/^[ \t]*//" | sed -e "s/[[:space:]]\+/ /g" | sed '/^$/d' | cut -c -63`
 }
 
 detectDE () {
@@ -190,11 +190,11 @@ detectFont () {
 }
 
 detectGPU1(){
-	gpuNameA=$(wmic path win32_VideoController get name | awk 'FNR==2{ print $0 }' | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//' | sed 's/Co., //' | sed 's/Ltd., //' | sed 's/Co. //' | sed 's/Ltd. //' | sed "s/^[ \t]*//" | sed -e "s/[[:space:]]\+/ /g" | sed '/^$/d')
+	gpuNameA=$(wmic path win32_VideoController get name | awk 'FNR==2{ print $0 }' | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//' | sed 's/Co., //' | sed 's/Ltd., //' | sed 's/Co. //' | sed 's/Ltd. //' | sed "s/^[ \t]*//" | sed -e "s/[[:space:]]\+/ /g" | sed '/^$/d' | cut -c -63)
 }
 
 detectGPU2(){
-	gpuNameB=$(wmic path win32_VideoController get name | awk 'FNR==3{ print $0 }' | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//' | sed 's/Co., //' | sed 's/Ltd., //' | sed 's/Co. //' | sed 's/Ltd. //' | sed "s/^[ \t]*//" | sed -e "s/[[:space:]]\+/ /g" | sed '/^$/d')
+	gpuNameB=$(wmic path win32_VideoController get name | awk 'FNR==3{ print $0 }' | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//' | sed 's/Co., //' | sed 's/Ltd., //' | sed 's/Co. //' | sed 's/Ltd. //' | sed "s/^[ \t]*//" | sed -e "s/[[:space:]]\+/ /g" | sed '/^$/d' | cut -c -63)
 	if [ -z "$gpuNameB" ]; then
 		gpuNameB="N/A"
 	fi
