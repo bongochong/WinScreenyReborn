@@ -1,6 +1,6 @@
 **Changelog**:
 
-05/16/2019 - Removed more garbage terms from manufacturer output. Increased DE detection up to one decimal point. Some nice little string replacements added as well.
+05/16/2019 - Removed more garbage terms from manufacturer output. More robust removal of potential garbage output. Increased DE detection up to one decimal point. Some nice little string replacements added as well.
 
 ---
 
