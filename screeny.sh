@@ -79,7 +79,7 @@ detectHost () {
 }
 
 detectCpu () {
-	cpu=$(awk -F':' '/model name/{ print $2 }' /proc/cpuinfo | head -n 1 | tr -s " " | sed 's/^ //' | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//' | sed 's/(CPU)//')
+	cpu=$(awk -F':' '/model name/{ print $2 }' /proc/cpuinfo | head -n 1 | tr -s " " | sed 's/^ //' | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//' | sed 's/ CPU//')
 }
 
 detectOS () {
