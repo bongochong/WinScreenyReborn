@@ -79,7 +79,7 @@ detectHost () {
 }
 
 detectCpu () {
-	cpu=$(awk -F':' '/model name/{ print $2 }' /proc/cpuinfo | head -n 1 | tr -s " " | sed 's/^ //' | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//' | sed 's/ CPU//')
+	cpu=$(awk -F':' '/model name/{ print $2 }' /proc/cpuinfo | head -n 1 | tr -s " " | sed 's/^ //' | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//' | sed 's/ CPU//' | sed 's/Co., //' | sed 's/Ltd., //' | sed 's/Co. //' | sed 's/Ltd. //')
 }
 
 detectOS () {
@@ -141,17 +141,21 @@ detectShell () {
 }
 
 detectMotherboard () {
-    board=`wmic baseboard get product,manufacturer | sed 's/Manufacturer  //' | sed 's/Product  //'| tr -d '\r\n' | sed 's/ \{2,\}/ /g'`
+    board=`wmic baseboard get product,manufacturer | sed 's/Manufacturer  //' | sed 's/Product  //'| tr -d '\r\n' | sed 's/ \{2,\}/ /g' | sed 's/Co., //' | sed 's/Ltd., //' | sed 's/Co. //' | sed 's/Ltd. //'`
 }
 
 detectDE () {
-	winver=`wmic os get version | grep -o '^[0-9]'`
-	if [ "$winver" == "6" ]; then
+	winver=`wmic os get version | grep -Eo "^[0-9]+\.[0-9]+"`
+	if [ "$winver" == "10.0" ]; then
+		de='Metro'
+	elif [ "$winver" == "6.2" ]; then
+		de='Metro'
+	elif [ "$winver" == "6.1" ]; then
 		de='Aero'
-	elif [ "$winver" == "5" ]; then
+	elif [ "$winver" == "6.0" ]; then
+		de='Aero'
+	elif [ "$winver" == "5.1" ]; then
 		de='Luna'
-	elif [ "$winver" == "1" ]; then
-		de='Aero'
 	else
 		de='N/A'
 	fi
@@ -182,11 +186,11 @@ detectFont () {
 }
 
 detectGPU1(){
-	gpuNameA=$(wmic path win32_VideoController get name | awk 'FNR==2{ print $0 }' | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//')
+	gpuNameA=$(wmic path win32_VideoController get name | awk 'FNR==2{ print $0 }' | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//' | sed 's/Co., //' | sed 's/Ltd., //' | sed 's/Co. //' | sed 's/Ltd. //')
 }
 
 detectGPU2(){
-	gpuNameB=$(wmic path win32_VideoController get name | awk 'FNR==3{ print $0 }' | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//')
+	gpuNameB=$(wmic path win32_VideoController get name | awk 'FNR==3{ print $0 }' | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//' | sed 's/Co., //' | sed 's/Ltd., //' | sed 's/Co. //' | sed 's/Ltd. //')
 	if [ -z "$gpuNameB" ]; then
 		gpuNameB="N/A"
 	fi
