@@ -79,11 +79,11 @@ detectHost () {
 }
 
 detectCpu () {
-	cpu=$(awk -F':' '/model name/{ print $2 }' /proc/cpuinfo | head -n 1 | tr -s " " | sed 's/^ //' | sed 's/(R)//' | sed 's/(TM)//')
+	cpu=$(awk -F':' '/model name/{ print $2 }' /proc/cpuinfo | head -n 1 | tr -s " " | sed 's/^ //' | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//' | sed 's/(CPU)//')
 }
 
 detectOS () {
-	os=`wmic os get name | head -2 | tail -1 | sed 's/Microsoft //'`
+	os=`wmic os get name | head -2 | tail -1 | sed 's/Microsoft //' | sed -i 's/Starter/Poverty/g' | sed -i 's/Basic/Toaster/g'`
 	os=`expr match "$os" '\(Windows [A-Za-z0-9] [A-Za-z0-9]\+\)'`
 }
 
@@ -182,11 +182,11 @@ detectFont () {
 }
 
 detectGPU1(){
-	gpuNameA=$(wmic path win32_VideoController get name | awk 'FNR==2{ print $0 }' | sed 's/(R)//' | sed 's/(TM)//')
+	gpuNameA=$(wmic path win32_VideoController get name | awk 'FNR==2{ print $0 }' | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//')
 }
 
 detectGPU2(){
-	gpuNameB=$(wmic path win32_VideoController get name | awk 'FNR==3{ print $0 }' | sed 's/(R)//' | sed 's/(TM)//')
+	gpuNameB=$(wmic path win32_VideoController get name | awk 'FNR==3{ print $0 }' | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//')
 	if [ -z "$gpuNameB" ]; then
 		gpuNameB="N/A"
 	fi
