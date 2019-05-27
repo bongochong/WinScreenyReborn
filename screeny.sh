@@ -6,7 +6,7 @@
 # Fixed, Further Improved and Modified by chongobong
 # License: GPLv3
 
-version='0.7'
+version='0.7.1'
 
 # Displayment
 display=( Host KerVer Cpu OS Arch Shell GPU1 GPU2 Motherboard HDD Memory Uptime Resolution DE WM WMTheme Font )
