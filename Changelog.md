@@ -1,5 +1,9 @@
 **Changelog**:
 
+05/30/2019 - Small fix for correct detection of Windows 10 version.
+
+---
+
 05/16/2019 - Removed more garbage terms from manufacturer output. More robust removal of potential garbage output. Increased DE detection up to one decimal point. Some nice little string replacements added as well.
 
 ---
