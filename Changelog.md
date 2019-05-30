@@ -1,6 +1,6 @@
 **Changelog**:
 
-05/30/2019 - Small fix for correct detection of Windows 10 version.
+05/30/2019 - Small fix for correct detection of Windows 10 version, and minor formatting clean up.
 
 ---
 
