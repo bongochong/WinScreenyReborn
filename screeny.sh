@@ -6,7 +6,7 @@
 # Fixed, Further Improved and Modified by chongobong
 # License: GPLv3
 
-version='0.7.1'
+version='0.7.2'
 
 # Displayment
 display=( Host KerVer Cpu OS Arch Shell GPU1 GPU2 Motherboard HDD Memory Uptime Resolution DE WM WMTheme Font )
@@ -235,7 +235,7 @@ cat <<EOF
 $f1
 $f1         ,.=:^!^!t3Z3z.,                ${f1}${user}${f7}@${f3}${host}
 $f1        :tt:::tt333EE3                  
-$f1        Et:::ztt33EEE  $f2@Ee.,      ..,   ${f1}OS: ${f7}${os} ${arch}
+$f1        Et:::ztt33EEE  $f2@Ee.,      ..,   ${f1}OS: ${f7}${os}${arch}
 $f1       ;tt:::tt333EE7 $f2;EEEEEEttttt33#   ${f1}Kernel: ${f7}Version $kerVer
 $f1      :Et:::zt333EEQ.$f2 SEEEEEttttt33QL   ${f1}CPU: ${f7}${cpu}
 $f1      it::::tt333EEF $f2@EEEEEEttttt33F    ${f1}HDD: ${f7}$free / $size
