@@ -1,5 +1,5 @@
 # WinScreenyReborn
-WinScreenyReborn is an improved and modified bug-fix version of BitsyByWill's revamped version of nijikokun's WinScreeny. It all works now, it has more features, and it supports Windows 8 and 10.
+WinScreenyReborn is an improved and modified bug-fix version of BitsByWill's revamped version of nijikokun's WinScreeny. It all works now, it has more features, and it supports Windows 8 and 10.
 ![WinScreenyReborn](winscreeny07.png)
 
 ## Getting Started
