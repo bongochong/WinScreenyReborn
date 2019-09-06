@@ -1,5 +1,9 @@
 **Changelog**:
 
+09/06/2019 - Very minor fix for users of 8.1. Tested to work on both Win 7 and Win 8.1. If you use Win 10 please let me know if there are any issues. Also improved detection of second GPU, if it exists.
+
+---
+
 05/30/2019 - Small fix for correct detection of Windows 10 version, and minor formatting clean up.
 
 ---
