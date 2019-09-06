@@ -6,7 +6,7 @@
 # Fixed, Further Improved and Modified by chongobong
 # License: GPLv3
 
-version='0.7.3'
+version='0.7.4'
 
 # Displayment
 display=( Host KerVer Cpu OS Arch Shell GPU1 GPU2 Motherboard HDD Memory Uptime Resolution DE WM WMTheme Font )
@@ -195,7 +195,7 @@ detectGPU1(){
 
 detectGPU2(){
 	gpuNameB=$(wmic path win32_VideoController get name | awk 'FNR==3{ print $0 }' | sed 's/(R)//' | sed 's/(TM)//' | sed 's/(C)//' | sed 's/Co., //' | sed 's/Ltd., //' | sed 's/Co. //' | sed 's/Ltd. //' | sed "s/^[ \t]*//" | sed -e "s/[[:space:]]\+/ /g" | sed '/^$/d' | cut -c -63)
-	if [ -z "$gpuNameB" ]; then
+	if [[ -z "${gpuNameB// }" ]]; then
 		gpuNameB="N/A"
 	fi
 }
