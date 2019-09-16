@@ -6,11 +6,11 @@ WinScreenyReborn is an improved and modified bug-fix version of BitsByWill's rev
 This program only works on Windows (XP to 10) with Cygwin installed. You can run it via Cygwin's terminal with `sh screeny.sh`, add an alias to it in your bash profile / bashrc, or use the `install.sh` script to have it placed in your `/bin` directory (in which case you'd simply run it as `screeny`).
   
 [The installer](https://raw.githubusercontent.com/bongochong/WinScreenyReborn/master/install.sh) can be run as follows: `lynx -source "https://raw.githubusercontent.com/bongochong/WinScreenyReborn/master/install.sh" > ~/install.sh && chmod +x ~/install.sh && sh ~/install.sh && rm ~/install.sh` and it will always install the latest version.
-  
-You may need to increase the size of your terminal depending on your font-size and such when using this script (you will know if you do).
-  
+
 Alternatively, you can always run the latest version of WinScreenyReborn by aliasing the following command in your bash profile / bashrc: `curl -s -q https://raw.githubusercontent.com/bongochong/WinScreenyReborn/master/screeny.sh | bash`
 
+You may need to increase the size of your terminal depending on your font-size and such when using this script (you will know if you do).
+  
 ## Usage
 	-v		Display script version
 	-h		Display this file
