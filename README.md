@@ -18,7 +18,7 @@ You may need to increase the size of your terminal depending on your font-size a
 ## Authors
 * **Chongo Bong** - [bongochong](https://github.com/bongochong) - Forked WinScreeny when it became abandoned once again. It was in a sorry state. Fixed all the bugs he could find, made the things work again, added a few new features, removed some garbage, and will actually keep WinScreeny updated.
 
-* **Will Liu** - [BitsByWill](https://github.com/BitsByWill) - Forked WinScreeny when it became abandoned. Made some things nicer, and made some things work again. Also did some not so nice things, and made some things not work (or they just broke over time and he didn't fix them, I can't tell, and I don't want to be unncessarily harsh).
+* **Will Liu** - [BitsByWill](https://github.com/BitsByWill) - Forked WinScreeny when it became abandoned. Made some things nicer, and made some things work again. Also did some not so nice things, and made some things not work (or they just broke over time and he didn't fix them, I can't tell, and I don't want to be unncessarily harsh here).
 
 * **Nijiko Yonskai** - [nijikokun](https://github.com/nijikokun) - Original creator of WinScreeny. A great man.
 
