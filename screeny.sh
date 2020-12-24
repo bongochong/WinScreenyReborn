@@ -23,7 +23,7 @@ for j in f b; do
   done
 done
 
-det=$(cmd /c ver | tr -d '\r\n ' |  sed 's/[^0-9]*//g' | cut -c1-2)
+det=$(cmd /c ver | tr -d '\r\n ' | sed 's/[^0-9]*//g' | cut -c1-2)
 if [ "$det" == "10" ] ; then
 	y=1
 elif [ "$det" == "62" ] ; then
@@ -141,7 +141,7 @@ detectShell () {
 }
 
 detectMotherboard () {
-    board=`wmic baseboard get product,manufacturer | sed 's/Manufacturer  //' | sed 's/Product  //'| tr -d '\r\n' | sed 's/ \{2,\}/ /g' | sed 's/Co., //' | sed 's/Ltd., //' | sed 's/Co. //' | sed 's/Ltd. //' | sed "s/^[ \t]*//" | sed -e "s/[[:space:]]\+/ /g" | sed '/^$/d' | cut -c -63`
+    board=`wmic baseboard get product,manufacturer | sed 's/Manufacturer  //' | sed 's/Product  //' | tr -d '\r\n' | sed 's/ \{2,\}/ /g' | sed 's/Co., //' | sed 's/Ltd., //' | sed 's/Co. //' | sed 's/Ltd. //' | sed "s/^[ \t]*//" | sed -e "s/[[:space:]]\+/ /g" | sed '/^$/d' | cut -c -63`
 }
 
 detectDE () {
