@@ -11,7 +11,7 @@ Alternatively, you can always run the latest version of WinScreenyReborn by alia
 
 You may need to increase the size of your terminal depending on your font-size and such when using this script (you will know if you do).
   
-## Usage
+## Additional Options
 	-v		Display script version
 	-h		Display this file
 
