@@ -1,6 +1,6 @@
 # WinScreenyReborn
 WinScreenyReborn is an improved and modified bug-fix version of BitsByWill's revamped version of nijikokun's WinScreeny. It all works now, it has more features, and it supports Windows 7, 8.1 and 10 (potentially XP and Vista as well).
-![WinScreenyReborn](winscreeny07.png)
+![WinScreenyReborn](winscreeny08.png)
 
 ## Getting Started
 This program only works on Windows with Cygwin installed. You can run it in Cygwin's terminal with `./screeny.sh`, add an alias to it in your bash profile / bashrc, or use the install script to have it placed in your `/bin` directory (in which case you'd simply run it as `screeny`).
