@@ -160,6 +160,10 @@ detectDE () {
 		de='Luna'
 	elif [ "$winver" == "5.1" ]; then
 		de='Luna'
+	elif [ "$winver" == "5.0" ]; then
+		de='Classic'
+	elif [ "$winver" == "4.0" ]; then
+		de='Classic'
 	else
 		de='N/A'
 	fi
