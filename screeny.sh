@@ -1,12 +1,12 @@
 #!/bin/bash
 #
-# Windows Screenfetch Fixed and Improved (Without the Screenshot functionality)
-# Originally Hacked together by Nijikokun <nijikokun@gmail.com> 
-# Improved and Modified by BitsByWill
-# Fixed, Further Improved and Modified by chongobong
+# Windows Screenfetch Fixed and Improved
+# Originally hacked together by Nijikokun <nijikokun@gmail.com> 
+# Improved and modified by BitsByWill
+# Fixed, further improved and modified by ChongoBong
 # License: GPLv3
 
-version='0.7.5'
+version='0.7.6'
 
 # Displayment
 display=( Host KerVer Cpu OS Arch Shell GPU1 GPU2 Motherboard HDD Memory Uptime Resolution DE WM WMTheme Font )
@@ -25,6 +25,18 @@ done
 
 det=$(cmd /c ver | tr -d '\r\n ' | sed 's/[^0-9]*//g' | cut -c1-2)
 if [ "$det" == "10" ] ; then
+	y=1
+elif [ "$det" == "40" ] ; then
+	y=1
+elif [ "$det" == "50" ] ; then
+	y=1
+elif [ "$det" == "51" ] ; then
+	y=1
+elif [ "$det" == "52" ] ; then
+	y=1
+elif [ "$det" == "60" ] ; then
+	y=1
+elif [ "$det" == "61" ] ; then
 	y=1
 elif [ "$det" == "62" ] ; then
 	y=1
