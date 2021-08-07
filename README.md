@@ -1,4 +1,9 @@
 # WinScreenyReborn
+<p align="left">
+  <img src="https://i.imgur.com/tmiMGph.png">
+  <img src="https://i.imgur.com/yZ6NnIW.png">
+</p>
+
 WinScreenyReborn is an improved and modified bug-fix version of BitsByWill's revamped version of nijikokun's WinScreeny. It all works now, it has more features, and it supports Windows 7, 8.1, 10 and 11 (potentially XP and Vista as well).
 ![WinScreenyReborn](winscreeny08.png)
 
