@@ -7,7 +7,7 @@ This program only works on Windows with Cygwin installed. You can run it in Cygw
   
 [The install script](https://raw.githubusercontent.com/bongochong/WinScreenyReborn/master/install.sh) can be run in your Cygwin terminal as follows: `lynx -source "https://raw.githubusercontent.com/bongochong/WinScreenyReborn/master/install.sh" > ~/install.sh && chmod +x ~/install.sh && ~/install.sh && rm ~/install.sh` It will always install the latest version.
 
-Alternatively, you can always run the latest version of WinScreenyReborn by aliasing the following command in your bash profile / bashrc: `curl -s -q https://raw.githubusercontent.com/bongochong/WinScreenyReborn/master/screeny.sh | bash`
+Alternatively, you can always run the latest version of WinScreenyReborn by aliasing the following command in your bash profile / bashrc: `curl -sq https://raw.githubusercontent.com/bongochong/WinScreenyReborn/master/screeny.sh | bash`
 
 You may need to increase the size of your terminal depending on your font-size and such when using this script (you will know if you do).
   
